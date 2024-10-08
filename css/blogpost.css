@@ -1,0 +1,109 @@
+.featured-article{
+    padding: 30px;
+    width: 80vw;
+    margin-top: 17px;
+    border-radius: 10px;
+}
+.contents h1{
+    font-size: 40px;
+    font-weight: bold;
+    padding-left: 25px;
+}
+.content1{
+    display: flex;
+    margin-top: 40px;
+}
+.content1 .text1{
+    width: 45vw;
+    padding-right: 60px;
+    padding-left: 30px;
+}
+.content1 img{
+    height: 20vw;
+    border-radius: 7px;
+}
+.content1 span, .content2 span, .content3 span, .last span{
+    font-size: 30px;
+}
+.content1 p, .last p, .content3 p{
+    font-size: 26px;
+}
+.content2{
+  display: flex;
+  margin-top: 40px;
+}
+.content2 img{
+    height: 60vh;
+    border-radius: 7px;
+    margin-left: 20px;
+}
+.content2 .text2{
+    width: 50vw;
+    padding-left: 35px;
+}
+.content2 ul{
+    font-size: 26px;
+    position: relative;
+    left: 25px;
+}
+.content3{
+    display: flex;
+    margin-top: 40px;
+}
+.content3 img{
+    width: 60vw;
+    height: 30vw;
+    border-radius: 7px;
+    margin: 20px 70px;
+}
+.content3 .text3{
+    width: 80vw;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+.content3 ul{
+    font-size: 26px;
+    position: relative;
+    left: 25px;
+}
+.last {
+    margin-top: 20px;
+    width: 75vw;
+    padding-left: 30px;
+}
+.contents img{
+    position: relative;
+    /* top: 25px; */
+}
+.comment-box {
+    max-width: 300px;
+    margin-top: 60px;
+    margin: 20px auto;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Style for the input field */
+.comment-box input[type="text"],
+.comment-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for the submit button */
+.comment-box input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
