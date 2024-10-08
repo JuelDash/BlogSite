@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login or Sign Up</title>
+  <link rel="stylesheet" href="css/start.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <div class="container hidden" id="signupContainer">
+    <h2>Create Account</h2>
+    <form id="signupForm" onsubmit="validateForm()">
+      <input type="email" id="signupEmail" name="signupEmail" placeholder="Email Address" required>
+      <input type="password" id="signupPassword" name="signupPassword" placeholder="Create Password"
+        onclick="isValidPassword()" required>
+      <input type="password" id="cpassword" name="signupPassword" placeholder="Confirm Password" required>
+      <button type="submit" id="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="/start.html" id="loginLink">Login</a></p>
+  </div>
+  <script>
+    function validateForm() {
+      var Username = document.getElementById("signupEmail").value;
+      var password = document.getElementById("signupPassword").value;
+      var cpassword = document.getElementById("cpassword").value;
+      if (password == cpassword) {
+        window.location.assign("index.html");
+        alert("Successfully Signed in");
+      }
+      else {
+        alert("Password does not match");
+      }
+    }
+    const formInput = document.querySelector('#signupForm');
+    formInput.addEventListener('click', () => {
+      const passwordInput = document.getElementById('password');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+      }
+    })
+  </script>
+</body>
+
+</html>
