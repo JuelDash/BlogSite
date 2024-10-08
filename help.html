@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>BlogHunt.com</title>
+  <style>
+    .support-content{
+    width: 60vw;
+    position: relative;
+    left: 230px;
+    padding: 25px;
+}
+.support-content h1{
+    font-size: 40px;
+}
+.support-content h2{
+    font-size: 33px;
+}
+.support-content h3{
+    font-size: 29px;
+}
+.support-content p{
+    font-size: 27px;
+}
+  </style>
+</head>
+
+<body>
+  <nav class="navigation">
+    <div class="nav-left">
+      <a href="/"><img src="img/BlogIcon.png" /></a>
+      <span><a href="/">BlogHunt</a></span>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li class="contact"><a href="/contact.html">Contact</a></li>
+        <li><a href="/#Articles">Articles</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <img src="img/searching.jpg" alt="searchimage">
+      <input class="search" id="searchInput" type="text" name="query" placeholder="Search articles" required>
+      <button class="btn" id="searchButton" onclick="searchArticle()" required>Search</button>
+    </div>
+  </nav>
+  <div class="contact-content font1">
+    <section class="support-content">
+        <h1>Help & Support</h1>
+        <p>Welcome to the Help & Support page of BlogHunt.com! We're here to assist you with any questions or concerns you may have. Below, you'll find answers to frequently asked questions and information on how to get in touch with us for further assistance</p>
+        <h2>Frequently Asked Questions(FAQs)</h2>
+        <h3>How do I navigate the blog?</h3>
+        <p>Navigating our blog is simple! You can browse through articles by clicking on the articles listed in the Featured articles of the home page. Additionally, you can use the search bar to find some specific topics or articles of interest.</p>
+        <h3>How can I leave a comment on an article?</h3>
+        <p>To leave a comment on an article, simply scroll to the bottom of the article page, where you'll find a comment section. Enter your comment in the provided text box and click the "Submit" button. Please note that comments are moderated to ensure a positive and respectful community experience.</p>
+        <h3>I found a typo/error in an article. How can I report it?</h3>
+        <p>We appreciate your help in maintaining the quality of our content! If you come across a typo or error in an article, please send us an email at <i>contact@bloghunt.com</i> with the subject line "Typo/Error Report." Be sure to include the title of the article and a description of the issue you found. We'll review it and make the necessary corrections.</p>
+        <h3>Can I contribute an article to the blog?</h3>
+        <p>Yes, we welcome contributions from our readers! If you have an article you'd like to submit for consideration, please go through the submit article form by clicking the publish button or send your article to <i>submit@bloghunt.com</i>. Our editorial team will review it, and if it meets our criteria, we'll be in touch regarding publication.</p>
+        <h3>Contact Us</h3>
+        <p>If you have a question, concern, or feedback that isn't addressed in our FAQs, please don't hesitate to reach out to us. You can contact us via email at <i>contact@bloghunt.com</i> or fill out the contact form <a href="contact.html">here</a>. We'll do our best to respond to your inquiry as soon as possible.</p>
+        <p>Thank you for visiting BlogHunt.com, and we hope you find the information on this page helpful. Happy reading!</p>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="bottom-left">
+      <span>Copyright  2024 © BlogHunt.com |</span>
+      <span> |  All rights reserved</span>
+    </div>
+    <div class="bottom-right">
+      <a href="/start.html"><button id="logIn">Log In</button></a>
+      <a href="/start2.html"><button id="signIn">Get Started</button></a>
+      <ul>
+        <li class="help"><a href="/help.html">Help?</a></li>
+        <li class="publish"><a href="/article.html">Publish</a></li>
+      </ul>
+    </div>
+  </footer>
+ <script src="script.js"></script>
+</body>
+</html>
