@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/blogpost.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>BlogHunt.com</title>
+</head>
+
+<body>
+  <nav class="navigation">
+    <div class="nav-left">
+      <a href="/"><img src="img/BlogIcon.png" /></a>
+      <span><a href="/">BlogHunt</a></span>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li class="contact"><a href="/contact.html">Contact</a></li>
+        <li><a href="/#Articles">Articles</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <img src="img/searching.jpg" alt="searchimage">
+      <input class="search" id="searchInput" type="text" name="query" placeholder="Search articles" required>
+      <button class="btn" id="searchButton" onclick="searchArticle()" required>Search</button>
+    </div>
+  </nav>
+
+  <section class="featured-article m-auto">
+    <div class="contents">
+      <h1>Demystifying Blockchain: Applications Beyond Cryptocurrency</h1>
+      <span style="font-size: 24px; margin: 34px;"><i>-- By Albert</i></span>
+      <div class="content1">
+        <div class="text1">
+          <p>Blockchain technology, initially popularized by its association with cryptocurrencies like Bitcoin, has
+            transcended its original purpose and found applications across various industries. While cryptocurrencies
+            remain a significant aspect, the potential of blockchain extends far beyond digital currencies. Here, we'll
+            explore some of the diverse applications of blockchain technology:</p>
+        </div>
+        <img src="img/blockchain.jpg" />
+      </div>
+      <div class="content3">
+        <div class="text3">
+          <ul>
+            <li><b>Supply Chain Management</b>: Blockchain facilitates transparent and traceable supply chains. Each
+              transaction or event in the supply chain is recorded on the blockchain, providing an immutable audit
+              trail. This enhances transparency, reduces fraud, and ensures the authenticity of products.</li>
+            <li><b>Smart Contracts</b>:Smart contracts are self-executing contracts with the terms of the agreement
+              directly written into code. Blockchain platforms like Ethereum enable the deployment of smart contracts,
+              automating contract execution without the need for intermediaries. Smart contracts find applications in
+              various fields, including real estate, insurance, and legal agreements.</li>
+            <li><b>Identity Management</b>: Blockchain can revolutionize identity management by providing a
+              decentralized and secure way to verify identities. Individuals can have control over their personal
+              information, reducing the risks associated with centralized data storage and identity theft.</li>
+            <li><b>Healthcare</b>: Blockchain technology can streamline healthcare processes such as patient record
+              management, insurance claims processing, and drug traceability. By securely storing and sharing medical
+              data across a decentralized network, blockchain enhances data integrity, interoperability, and patient
+              privacy.</li>
+            <li><b>Voting Systems</b>: Blockchain-based voting systems offer transparent, tamper-proof, and verifiable
+              elections. Each vote is recorded on the blockchain, ensuring accuracy and preventing fraud. Blockchain
+              voting can increase voter turnout, enhance trust in electoral processes, and reduce the likelihood of
+              electoral disputes.</li>
+            <li><b>Intellectual Property Protection</b>: Blockchain enables the creation of digital ledgers to record
+              ownership and transfer of intellectual property rights. Artists, authors, and inventors can use blockchain
+              to establish ownership of their creations, prevent unauthorized use, and ensure fair compensation for
+              their work.</li>
+            <li><b>Decentralized Finance (DeFi)</b>: DeFi leverages blockchain technology to create financial services
+              and products without traditional intermediaries like banks. DeFi platforms enable activities such as
+              lending, borrowing, trading, and earning interest with greater accessibility, transparency, and security.
+            </li>
+            <li><b>Supply Chain Finance</b>: Blockchain-based supply chain finance platforms offer efficient and
+              transparent financing solutions for businesses involved in supply chain operations. By digitizing and
+              tokenizing assets, blockchain enables real-time financing, reduces transaction costs, and mitigates
+              counterparty risks.</li>
+            <li><b>Real Estate</b>: Blockchain can disrupt the real estate industry by facilitating transparent property
+              transactions, title transfers, and automated contract execution through smart contracts. Blockchain-based
+              property registries provide immutable records of ownership, reducing disputes and fraud.</li>
+            <li><b>Energy Trading</b>: Blockchain enables peer-to-peer energy trading among producers and consumers in
+              decentralized energy networks. Participants can buy, sell, and trade excess energy in real-time, promoting
+              renewable energy adoption, reducing costs, and enhancing energy efficiency.</li>
+            <p>These are just a few examples of the diverse applications of blockchain technology beyond cryptocurrency.
+              As the technology continues to evolve, it holds the potential to revolutionize various industries and
+              transform traditional business models.</p>
+          </ul>
+        </div>
+      </div>
+  </section>
+  <div class="comment-box">
+    <form id="myForm" method="POST">
+      <input type="hidden" name="access_key" value="d0b8bc1b-2a81-4f29-96fd-14f70532f8d8">
+      <label style="display: flex; justify-content: center; font-size: 24px;">Any suggestion or raising</label>
+      <textarea name="Article4 - comment" placeholder="Your Comment" required style="font-size: 22px" id="text"></textarea>
+      <input type="submit" value="Submit" style="font-size: 19px">
+    </form>
+    <div id="result"></div>
+  </div>
+  <footer class="footer">
+    <div class="bottom-left">
+      <span>Copyright 2024 © BlogHunt.com |</span>
+      <span> | All rights reserved</span>
+    </div>
+    <div class="bottom-right">
+      <a href="/start.html"><button id="logIn">Log In</button></a>
+      <a href="/start2.html"><button id="signIn">Get Started</button></a>
+      <ul>
+        <li class="help"><a href="/help.html">Help?</a></li>
+        <li class="publish"><a href="/article.html">Publish</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script>
+    const form = document.getElementById('myForm');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      result.innerHTML = "Please wait..."
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+        .then(async (response) => {
+          let json = await response.json();
+          if (response.status == 200) {
+            result.innerHTML = "Your concerns received successfully";
+          } else {
+            console.log(response);
+            result.innerHTML = json.message;
+          }
+        })
+        .catch(error => {
+          console.log(error);
+          result.innerHTML = "Something went wrong!";
+        })
+        .then(function () {
+          form.reset();
+          setTimeout(() => {
+            result.style.display = "none";
+          }, 3000);
+        });
+    });
+  </script>
+</body>
+
+</html>
