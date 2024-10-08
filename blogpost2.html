@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/blogpost.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>BlogHunt.com</title>
+</head>
+
+<body>
+  <nav class="navigation">
+    <div class="nav-left">
+      <a href="/"><img src="img/BlogIcon.png" /></a>
+      <span><a href="/">BlogHunt</a></span>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li class="contact"><a href="/contact.html">Contact</a></li>
+        <li><a href="/#Articles">Articles</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <img src="img/searching.jpg" alt="searchimage">
+      <input class="search" id="searchInput" type="text" name="query" placeholder="Search articles" required>
+      <button class="btn" id="searchButton" onclick="searchArticle()" required>Search</button>
+    </div>
+  </nav>
+
+  <section class="featured-article m-auto">
+    <div class="contents">
+      <h1>The Power of Storytelling: Examining Narrative Techniques in Contemporary Literature</h1>
+      <span style="font-size: 24px; margin: 34px;"><i>-- By Rohit</i></span>
+      <div class="content1">
+        <div class="text1">
+          <span>Introduction:</span>
+          <p>In the vast landscape of contemporary literature, storytelling remains a timeless art form that captivates
+            readers and transports them to worlds both familiar and fantastical. Behind every compelling narrative lies
+            a tapestry of techniques employed by authors to engage, provoke, and resonate with their audience. In this
+            exploration, we delve into the intricate craft of storytelling, dissecting the narrative techniques utilized
+            by modern authors to craft unforgettable tales.</p>
+        </div>
+        <img src="img/storytelling2.jpg" />
+      </div>
+      <div class="content3">
+        <div class="text3">
+          <span>Character Development:</span>
+          <p>One of the cornerstones of storytelling is the creation of vivid and multi-dimensional characters that
+            readers can empathize with and invest in emotionally. We analyze how contemporary authors breathe life into
+            their characters through meticulous attention to detail, realistic dialogue, and complex motivations,
+            exploring the nuances of character development in novels spanning various genres.</p>
+          <span>Plot Structure and Pacing:</span>
+          <p>From the gripping opening chapter to the climactic resolution, the structure and pacing of a narrative play
+            a pivotal role in holding the reader's attention and building tension. We examine the diverse approaches
+            taken by authors to structure their plots, from nonlinear timelines and multiple perspectives to plot twists
+            and cliffhangers, unraveling the art of crafting a compelling narrative arc.</p>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="text1">
+          <span>Point of View and Narrative Voice:</span>
+          <p>The choice of point of view and narrative voice significantly shapes the reader's experience of a story,
+            offering unique perspectives and insights into the characters and events depicted. We investigate how
+            authors experiment with different narrative voices, including first-person narration, third-person
+            omniscient, and unreliable narrators, to imbue their stories with authenticity and intimacy.</p>
+        </div>
+        <img src="img/storytelling1.jpg" style="height: 24vw; width: 30vw;" />
+      </div>
+      <div class="content3">
+        <div class="text3">
+          <span>Symbolism and Allegory:</span>
+          <p>Beyond the surface level of plot and character lies a rich tapestry of symbolism and allegory that adds
+            depth and layers of meaning to a narrative. We explore how contemporary authors employ symbols, motifs, and
+            allegorical elements to convey thematic messages and explore universal truths, inviting readers to engage in
+            thought-provoking interpretation and analysis.</p>
+          <span>Narrative Experimentation and Innovation:</span>
+          <p>In an age of literary experimentation, authors are pushing the boundaries of traditional storytelling
+            conventions, experimenting with form, structure, and genre to create innovative and boundary-pushing works
+            of literature. We showcase examples of narrative experimentation in contemporary literature, from fragmented
+            narratives and metafictional techniques to interactive storytelling and multimedia integration.</p>
+        </div>
+      </div>
+
+      <div class="last">
+        <span>Conclusion:</span>
+        <p>As we navigate the rich and diverse landscape of contemporary literature, one thing remains clear:
+          storytelling endures as a powerful means of human expression, connection, and understanding. By examining the
+          narrative techniques employed by modern authors, we gain insight into the artistry and craft behind the
+          stories that shape our world and enrich our lives. Through the power of storytelling, we embark on a journey
+          of exploration, imagination, and discovery, forging connections that transcend time and space.
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="comment-box">
+    <form id="myForm" method="POST">
+      <input type="hidden" name="access_key" value="d0b8bc1b-2a81-4f29-96fd-14f70532f8d8">
+      <label style="display: flex; justify-content: center; font-size: 24px;">Any suggestion or raising</label>
+      <textarea name="Article2 - comment" placeholder="Your Comment" required style="font-size: 22px" id="text"></textarea>
+      <input type="submit" value="Submit" style="font-size: 19px">
+    </form>
+    <div id="result"></div>
+  </div>
+  <footer class="footer">
+    <div class="bottom-left">
+      <span>Copyright 2024 © BlogHunt.com |</span>
+      <span> | All rights reserved</span>
+    </div>
+    <div class="bottom-right">
+      <a href="/start.html"><button id="logIn">Log In</button></a>
+      <a href="/start2.html"><button id="signIn">Get Started</button></a>
+      <ul>
+        <li class="help"><a href="/help.html">Help?</a></li>
+        <li class="publish"><a href="/article.html">Publish</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script>
+    const form = document.getElementById('myForm');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      result.innerHTML = "Please wait..."
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+        .then(async (response) => {
+          let json = await response.json();
+          if (response.status == 200) {
+            result.innerHTML = "Your concerns received successfully";
+          } else {
+            console.log(response);
+            result.innerHTML = json.message;
+          }
+        })
+        .catch(error => {
+          console.log(error);
+          result.innerHTML = "Something went wrong!";
+        })
+        .then(function () {
+          form.reset();
+          setTimeout(() => {
+            result.style.display = "none";
+          }, 3000);
+        });
+    });
+  </script>
+</body>
+
+</html>
