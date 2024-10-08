@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>BlogHunt.com</title>
+  <style>
+    .about-content{
+   width: 60vw;
+   position: relative;
+   left: 230px;
+   padding: 20px; 
+   border-radius: 10px;
+}
+.about-content h1{
+    font-size: 33px;
+}
+.about-content p{
+    font-size: 24px; 
+}
+  </style>
+</head>
+
+<body>
+  <nav class="navigation">
+    <div class="nav-left">
+      <a href="/"><img src="img/BlogIcon.png" /></a>
+      <span><a href="/">BlogHunt</a></span>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li class="contact"><a href="/contact.html">Contact</a></li>
+        <li><a href="/#Articles">Articles</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <img src="img/searching.jpg" alt="searchimage">
+      <input class="search" id="searchInput" type="text" name="query" placeholder="Search articles" required>
+      <button class="btn" id="searchButton" onclick="searchArticle()" required>Search</button>
+    </div>
+  </nav>
+  <!-- <div class="contact-content font1"> -->
+    <section class="about-content font1">
+        <h1>Welcome to BlogHunt.com</h1>
+        <p>At BlogHunt.com, we're dedicated to sharing insightful content, engaging stories, and valuable information with our readers. Whether you're a seasoned enthusiast or just starting on your journey, our blog is here to inspire, inform, and entertain you.</p>
+        <p>Our journey began with a passion for writing content, and since then, we've been committed to providing our readers with high-quality, well-researched articles that cover a wide range of topics within Education and Entertainment values.</p>
+        <p>At BlogHunt.com, we believe in the power of storytelling to connect, educate, and inspire. Through our articles, we aim to educate, entertain, inspire people, and we strive to create a welcoming and inclusive community where everyone feels heard and valued.</p>
+        <p>We understand that our readers are busy individuals with diverse interests and commitments, which is why we're committed to delivering content that is not only informative and engaging but also easy to digest and accessible to all.</p>
+        <p>Thank you for being part of our journey. We're thrilled to have you here, and we look forward to sharing many more stories, insights, and experiences with you in the future.</p>
+        <p>If you have any questions, suggestions, or would like to contribute to our blog, please don't hesitate to get in touch. We love hearing from our readers and value your feedback.</p>
+        <p>Happy reading!</p>
+        <p>Sincerely,</p>
+        <p>BlogHunt Team</p>
+    </section>
+  <!-- </div> -->
+  <footer class="footer">
+    <div class="bottom-left">
+      <span>Copyright  2024 © BlogHunt.com |</span>
+      <span> |  All rights reserved</span>
+    </div>
+    <div class="bottom-right">
+      <a href="/start.html"><button id="logIn">Log In</button></a>
+      <a href="/start2.html"><button id="signIn">Get Started</button></a>
+      <ul>
+        <li class="help"><a href="/help.html">Help?</a></li>
+        <li class="publish"><a href="/article.html">Publish</a></li>
+      </ul>
+    </div>
+  </footer>
+ <script src="script.js"></script>
+</body>
+</html>
